@@ -12,12 +12,12 @@ export default {
         ]
     },
     loading: {color: '#3B8070'},
-    css: [],
+    css: ['~/assets/sass/app.sass'],
     build: {},
     buildModules: ['@nuxt/typescript-build'],
     modules: [
         '@nuxtjs/axios',
-        ['nuxt-buefy'],
+        ['nuxt-buefy', {css: false}],
         '@nuxtjs/style-resources'
     ],
     axios: {},
@@ -26,7 +26,7 @@ export default {
     },
     styleResources: {
         sass: [
-            '@/assets/sass/app.sass',
+            '~/assets/sass/app.sass',
         ]
     }
 }
