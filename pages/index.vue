@@ -122,40 +122,40 @@
                             p.subtitle
                                 | Our licensing agreements are a cost model that enables collaboration,
                                 | comfortable margin and product flexibility with our clients.
-        section.hero
-            .hero-body
-                .container
-                    .columns
-                        .column.has-text-centered.features.bg-red(data-aos="fade-left")
-                            .darken
-                            span.icon.is-large
-                                img(src="@/assets/icons/work.png")
-                            p.title.is-4 How we work
-                            p.subtitle
-                                | Our highly-configurable core system allows unique capability
-                                | and business logic to be implemented for clients with ease. Due
-                                | to the underlying technology stack lower resources are
-                                | required resulting in higher margins.
-                        .column.has-text-centered.features.bg-red(data-aos="fade-up")
-                            .darken
-                            span.icon.is-large
-                                img(src="@/assets/icons/process.png")
-                            p.title.is-4 Our processes
-                            p.subtitle
-                                | We work in an agile method, using a technology stack that
-                                | gives us the ability to deliver bespoke plataforms with
-                                | quick turnaround times without sacrificing quality.
-
-                        .column.has-text-centered.features.bg-red(data-aos="fade-right")
-                            .darken
-                            span.icon.is-large
-                                img(src="@/assets/icons/team.png")
-                            p.title.is-4 The team
-                            p.subtitle
-                                | As a result of the way we work and strucuture ourselves it is
-                                | vital we surround ourselves  with the right people. With that
-                                | in mind we have carefully built a talented and hard-working team
-                                | of Full-Stack developers driving the delivery  of all StatEdge products.
+        // section.hero
+        //     .hero-body
+        //         .container
+        //             .columns
+        //                 .column.has-text-centered.features.bg-red(data-aos="fade-left")
+        //                     .darken
+        //                     span.icon.is-large
+        //                         img(src="@/assets/icons/work.png")
+        //                     p.title.is-4 How we work
+        //                     p.subtitle
+        //                         | Our highly-configurable core system allows unique capability
+        //                         | and business logic to be implemented for clients with ease. Due
+        //                         | to the underlying technology stack lower resources are
+        //                         | required resulting in higher margins.
+        //                 .column.has-text-centered.features.bg-red(data-aos="fade-up")
+        //                     .darken
+        //                     span.icon.is-large
+        //                         img(src="@/assets/icons/process.png")
+        //                     p.title.is-4 Our processes
+        //                     p.subtitle
+        //                         | We work in an agile method, using a technology stack that
+        //                         | gives us the ability to deliver bespoke plataforms with
+        //                         | quick turnaround times without sacrificing quality.
+        //
+        //                 .column.has-text-centered.features.bg-red(data-aos="fade-right")
+        //                     .darken
+        //                     span.icon.is-large
+        //                         img(src="@/assets/icons/team.png")
+        //                     p.title.is-4 The team
+        //                     p.subtitle
+        //                         | As a result of the way we work and strucuture ourselves it is
+        //                         | vital we surround ourselves  with the right people. With that
+        //                         | in mind we have carefully built a talented and hard-working team
+        //                         | of Full-Stack developers driving the delivery  of all StatEdge products.
         section.section
             .container
                 .columns

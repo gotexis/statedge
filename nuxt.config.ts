@@ -12,7 +12,10 @@ export default {
         ]
     },
     loading: {color: '#3B8070'},
-    css: ['~/assets/sass/app.sass'],
+    css: [
+        '~/assets/sass/app.sass',
+        'aos/dist/aos.css',
+    ],
     build: {},
     buildModules: ['@nuxt/typescript-build'],
     modules: [
@@ -28,5 +31,8 @@ export default {
         sass: [
             '~/assets/sass/app.sass',
         ]
-    }
+    },
+    plugins: [
+        {src: '@/plugins/aos.js', mode: 'client'}
+    ],
 }
