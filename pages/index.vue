@@ -235,6 +235,7 @@
 
                 .logo-float-2
                     height: 200px
+                    max-height: 100%
                     width: 40%
                     text-align: center
                     display: flex
