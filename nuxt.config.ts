@@ -16,7 +16,9 @@ export default {
         '~/assets/sass/app.sass',
         'aos/dist/aos.css',
     ],
-    build: {},
+    build: {
+        cssSourceMap: false,
+    },
     buildModules: ['@nuxt/typescript-build'],
     modules: [
         '@nuxtjs/axios',
