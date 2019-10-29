@@ -4,7 +4,6 @@
         .bg-left.break-mobile
         .bg-left-2.break-mobile
         .bg-left-3.break-mobile
-        .gutter.break-mobile
         .is-inline-block.content(data-aos="fade-left")
             p
                 strong StatEdge
@@ -61,10 +60,9 @@ export default class Footer extends Vue {}
             @media (max-width: 900px)
                 display: none
 
-        .gutter
-            display: inline-block
-            width: 60%
-            height: 1px
+        .content
+            @media (min-width: 901px)
+                margin-left: 60%
 
         .bg-left
             animation: footer-slideshow 10s cubic-bezier(0.6, 0, 0.2, 1) infinite
