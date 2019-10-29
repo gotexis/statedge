@@ -18,9 +18,9 @@
                                 span
                         #navbarMenu.navbar-menu
                             .navbar-end
-                                router-link.navbar-item(:to="{name: 'index'}")
+                                nuxt-link.navbar-item(:to="{name: 'index'}")
                                     | Home
-                                a.navbar-item
+                                a.navbar-item(:to="{name: 'about'}")
                                     | About
                                 a.navbar-item
                                     | Contact
