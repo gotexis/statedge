@@ -1,7 +1,7 @@
 <template lang="pug">
     section.hero.is-primary.is-medium.real-hero
         .bg-container(:style="bgStyle")
-            .bg-right(:style="bgRightStyle")
+        .bg-right(:style="bgRightStyle")
         // Hero head
         .hero-head
             nav.navbar
@@ -31,7 +31,8 @@
         // Hero content: will be in the middle
         .hero-body
             .container.has-text-centered
-                img.swipe.hero-logo(src='@/assets/images/logo/StatEdge_Logo-lockup-white.png', alt='Logo')
+                .hero-logo
+                    img(src='@/assets/images/logo/StatEdge_Logo-lockup-white.png', alt='Logo')
                 h1.title.slogan-mobile.is-family-code(data-aos="fade-left")
                     | Sport technology reinvented.
             .slogan
@@ -100,16 +101,6 @@
 <style lang="sass">
     $heroHeight: 100vh
 
-    @keyframes swipe-inverse
-        49%
-            clip-path: none
-        50%
-            clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0, 34% 0, 14% 100%, 7% 100%, 27% 0)
-        60%
-            clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0, 100% 0, 86% 100%, 78% 100%, 93% 0)
-        61%
-            clip-path: none
-
     @keyframes swipe
         0%
             clip-path: polygon(11% 0, 23% 0, 10% 100%, 0 100%)
@@ -149,7 +140,9 @@
                 visibility: hidden
 
         .hero-body
-            // padding: 0 0 200px
+            padding: 0 !important
+            .hero-logo
+                padding: 15%
 
             @media(max-width: $tablet)
                 padding-bottom: 100px
@@ -176,34 +169,35 @@
 
             /*background-size: cover*/
             background-attachment: fixed
-            background-position: center bottom
+            background-position: left bottom
             background-repeat: no-repeat
+            background-size: 100%
 
             animation: slideshow 7s infinite alternate
 
-            .bg-right
-                position: absolute
-                right: 0
+        .bg-right
+            position: absolute
+            right: 0
+            height: 100%
+            width: 1000px
+
+            &::after
                 height: 100%
-                width: 1000px
+                background-size: $heroHeight
+                //background-attachment: scroll
+                background-position: right
+                background-repeat: no-repeat
+                background-image: url(~assets/images/banner/hero-right-half.png)
+                /* Display and position the pseudo-element */
+                content: " "
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
 
-                &::after
-                    height: 100%
-                    background-size: $heroHeight
-                    //background-attachment: scroll
-                    background-position: right
-                    background-repeat: no-repeat
-                    background-image: url(~assets/images/banner/hero-right-half.png)
-                    /* Display and position the pseudo-element */
-                    content: " "
-                    position: absolute
-                    top: 0
-                    right: 0
-                    bottom: 0
-                    left: 0
-
-                    /* Move the pseudo-element back away from the camera,
-                     * then scale it back up to fill the viewport.
-                     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-                    transform: translateZ(100px) scale(1)
+                /* Move the pseudo-element back away from the camera,
+                 * then scale it back up to fill the viewport.
+                 * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+                transform: translateZ(100px) scale(1)
 </style>
