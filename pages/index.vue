@@ -242,6 +242,7 @@
 
                     @media(max-width: $tablet)
                         width: 100%
+                        max-height: 100%
 
                     img, a
                         max-height: 100%
@@ -253,6 +254,7 @@
 
                     @media(max-width: $tablet)
                         width: 100%
+                        text-align: left
 
             .card-2-bg-red
                 position: absolute
