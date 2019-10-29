@@ -33,8 +33,8 @@
             .hero-body
                 .container.has-text-centered
                     img.swipe.hero-logo(src='@/assets/images/logo/StatEdge_Logo-lockup-white.png', alt='Logo')
-                    h1.title(data-aos="fade-left")
-                        | (Edge not supported)
+                    h1.title.slogan-mobile.is-family-code(data-aos="fade-left")
+                        | {{slogan}}
                 .slogan
                     h1.is-family-code.is-size-1
                         | Sport
@@ -251,6 +251,9 @@
                 marginRight: String(baseWidth - this.percentage * 300) + "px"
             }
         }
+        get slogan() {
+            return 'Sport technology reinvented.'
+        }
     }
 </script>
 
@@ -308,6 +311,10 @@
         bottom: 100px
 
         @media(max-width: $tablet)
+            visibility: hidden
+
+    .slogan-mobile
+        @media(min-width: $tablet)
             visibility: hidden
 
     $heroHeight: 100vh
@@ -368,6 +375,7 @@
 
         // Hero scene including header
         .real-hero
+            background-color: $brown
             overflow: hidden
             position: relative
 
