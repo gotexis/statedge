@@ -1,7 +1,7 @@
 <template lang="pug">
     footer
-        .bg-left-1.break-mobile
-        .bg-left.break-mobile
+        // .bg-left-1.break-mobile
+        // .bg-left.break-mobile
         .bg-left-2.break-mobile
         .bg-left-3.break-mobile
         .is-inline-block.content(data-aos="fade-left")

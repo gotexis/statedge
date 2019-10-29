@@ -1,7 +1,7 @@
 <template lang="pug">
     #home
         Hero
-        section.hero
+        section.hero.mt-20
             .hero-body
                 .container
                     .columns
@@ -28,16 +28,6 @@
                             p.subtitle Robust competition management platforms that facilitate
                                 | the end-to-end management of any sport that are highly
                                 | configurable and integrate directly with StatEdge Engagement applications.
-        section.container
-            .hero-body
-                p.title.has-text-centered Our sponsored
-                .partners
-                    .partner(data-aos="fade")
-                        a(href='#', target='_blank' @click.prevent="null")
-                            img(src='@/assets/images/logos/partners/Bowral.jpeg')
-                    .partner(data-aos="fade")
-                        a(href='#', target='_blank' @click.prevent="null")
-                            img(src='@/assets/images/logos/partners/Randwick.jpg')
         section.hero.is-light
             .hero-body
                 .container
@@ -66,58 +56,45 @@
                                 | comfortable margin and product flexibility with our clients.
         section.section
             .container
+                p.title.has-text-centered Our partners
                 .columns
                     .column
                         // Rubgy
                         .card.card-1(data-aos="fade-up")
                             .card-1-bg-red
-                                img(src="@/assets/images/card-bg/pure-red-rotate.png")
                             .card-content
-                                // p.title Rugby League
-                                a(href='#', target='_blank' @click.prevent="null")
-                                    img(src='@/assets/images/logos/partners/RugbyAU_Logo_Primary copy.png')
-                                p.is-family-code.is-size-4
-                                    | StatEdge chose to enter the sports technology landscape with the intention
-                                    | of creating world best participant sports software. StatEdge have executed
-                                    | creative and stable product across a demanding and influential clientele.
-
-                                p
-                                    | With a unique understanding of participant sports and product  development,
-                                    | StatEdgehave been able to apply an approach  that focuses on product design,
-                                    | delivery and servicing. Given  the complexities of the sports technology
-                                    | landscape StatEdge  understand the importance of integrating with multiple
-                                    | third-parties, our underlying architecture integrates seamlessly.
-                                p
-                                    | We are proud of our ability to deliver unique and innovative software
-                                    | products in partnership with our clients. We would  welcome the opportunity
-                                    | to integrate with Stack and continue the journey towards client delivery
-                                    | and worlds  best sports software.
+                                .logo-float-1
+                                    a(href='#', target='_blank' @click.prevent="()=>null")
+                                        img(src='@/assets/images/logos/partners/RugbyAU_Logo_Primary copy.png')
+                                .card-1-text
+                                    p.is-family-code.is-size-4
+                                        | StatEdge chose to enter the sports technology landscape with the intention
+                                        | of creating world best participant sports software. StatEdge have executed
+                                        | creative and stable product across a demanding and influential clientele.
                 .columns
                     .column
                         // NRL
                         .card.card-2(data-aos="fade-up")
                             .card-2-bg-red
-                                img(src="@/assets/images/card-bg/pure-white-rotate.png")
                             .card-content
-                                // p.title Rugby League
-                                .logo-float
-                                    a(href='#', target='_blank' @click.prevent="null")
+                                .logo-float-2
+                                    a(href='#', target='_blank' @click.prevent="()=>null")
                                         img(src='@/assets/images/logos/partners/NRL_logo copy.png')
-                                p.is-family-code.is-size-4
-                                    | StatEdge chose to enter the sports technology landscape with the intention
-                                    | of creating world best participant sports software. StatEdge have executed
-                                    | creative and stable product across a demanding and influential clientele.
-                                p
-                                    | With a unique understanding of participant sports and product  development,
-                                    | StatEdgehave been able to apply an approach  that focuses on product design,
-                                    | delivery and servicing. Given  the complexities of the sports technology
-                                    | landscape StatEdge  understand the importance of integrating with multiple
-                                    | third-parties, our underlying architecture integrates seamlessly.
-                                p
-                                    | We are proud of our ability to deliver unique and innovative software
-                                    | products in partnership with our clients. We would  welcome the opportunity
-                                    | to integrate with Stack and continue the journey towards client delivery
-                                    | and worlds best sports software.
+                                .card-2-text
+                                    p.is-family-code.is-size-4
+                                        | StatEdge chose to enter the sports technology landscape with the intention
+                                        | of creating world best participant sports software. StatEdge have executed
+                                        | creative and stable product across a demanding and influential clientele.
+        section.container
+            .hero-body
+                p.title.has-text-centered We proudly sponsor
+                .partners
+                    .partner(data-aos="fade")
+                        a(href='#', target='_blank' @click.prevent="()=>null")
+                            img(src='@/assets/images/logos/partners/Bowral.jpeg')
+                    .partner(data-aos="fade")
+                        a(href='#', target='_blank' @click.prevent="()=>null")
+                            img(src='@/assets/images/logos/partners/Randwick.jpg')
         Footer
 </template>
 
@@ -134,11 +111,14 @@
         }
     })
     export default class Home extends Vue {
-
     }
 </script>
 
 <style lang="sass" scoped>
+
+    .mt-20
+        // have a bit  of margin on top of every heros
+        margin-top: 100px
 
     // todo: below should be global
     .is-text-primary
@@ -177,17 +157,11 @@
             font-style: normal
 
         .card-1
-            padding-right: 50%
-            // controls the max content of card
-
-            @media(max-width: $tablet)
-                padding-right: 0
-
             overflow: hidden
             color: white
             position: relative
 
-            background-image: url(~assets/images/banner/hero-left.png)
+            background-image: url(~assets/images/card-bg/red-crowd.png)
             background-position: right bottom
             background-size: cover
             background-repeat: no-repeat
@@ -195,21 +169,48 @@
 
             z-index: -2
 
+            .card-content
+                display: flex
+                flex-direction: row-reverse
+                justify-content: space-between
+                flex-wrap: wrap
+
+                .card-1-text
+                    width: 40%
+
+                    @media(max-width: $tablet)
+                        width: 100%
+
+                .logo-float-1
+                    width: 40%
+                    height: 200px
+                    display: flex
+                    text-align: center
+                    img
+                        justify-self: right
+                        max-height: 100%
+
+                    @media(max-width: $tablet)
+                        width: 100%
+
             .title
                 color: white
 
             .card-1-bg-red
                 position: absolute
-                left: 0
+                right: 0
                 top: 0
-                width: 70%
+                width: 100%
                 height: 100%
                 z-index: -1
-        // background-image: url(~assets/images/card-bg/pure-red-rotate.png)
-        // background-size: 100% 100%
+                background: white
+                clip-path: polygon(40% 0, 100% 0%, 100% 100%, 80% 100%)
+
+                @media(max-width: $tablet)
+                    display: none
 
         .card-2
-            padding-right: 50%
+            color: white
             // controls the max content of card
             overflow: hidden
             position: relative
@@ -225,10 +226,32 @@
             .title
                 color: white
 
-            .logo-float
-                position: absolute
-                right: 0
-                margin-right: 30px
+            .card-content
+                text-align: right
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-between
+
+                .logo-float-2
+                    height: 200px
+                    width: 40%
+                    text-align: center
+                    display: flex
+
+                    @media(max-width: $tablet)
+                        width: 100%
+
+                    img, a
+                        max-height: 100%
+                        margin-left: auto
+                        margin-right: auto
+
+                .card-2-text
+                    width: 40%
+
+                    @media(max-width: $tablet)
+                        width: 100%
 
             .card-2-bg-red
                 position: absolute
@@ -237,6 +260,10 @@
                 width: 70%
                 height: 100%
                 z-index: -1
-    // background-image: url(~assets/images/card-bg/pure-red-rotate.png)
-    // background-size: 100% 100%
+                clip-path: polygon(0 0, 86% 0, 46% 100%, 0 100%)
+                background-color: white
+
+                @media(max-width: $tablet)
+                    display: none
+
 </style>
