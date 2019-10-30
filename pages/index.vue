@@ -9,25 +9,21 @@
                             span.icon.is-large
                                 img(src="@/assets/icons/icon-hand-shake.png")
                             p.title.is-4 Grassroots
-                            p.subtitle Our white labelled grassroots engagement platforms can be
-                                | configured to integrate seamlessly with any competition management
-                                | platform, combining competition and player data with engaging media
-                                | content and resources to create a tightly connected ecosystem.
+                            p.subtitle White-labelled grassroots engagement platforms that integrates seamlessly
+                                | with any competition management
+                                | platform.
                         .column.has-text-centered.features(data-aos="fade-up")
                             span.icon.is-large
                                 img(src="@/assets/icons/icon-elite.png")
                             p.title.is-4 Elite
-                            p.subtitle StatEdge provides a number of game day management
-                                | tools that service top tier competitions including the NRL
-                                | Telstra Premiership, Super  W and the Rugby League World Cup
-                                | that integrate with a number of third-parties and media providers.
+                            p.subtitle Service top tier competitions including the NRL
+                                | Telstra Premiership, Super W and the Rugby League World Cup.
                         .column.has-text-centered.features(data-aos="fade-right")
                             span.icon.is-large
                                 img(src="@/assets/icons/icon-administration.png")
                             p.title.is-4 Administration
-                            p.subtitle Robust competition management platforms that facilitate
-                                | the end-to-end management of any sport that are highly
-                                | configurable and integrate directly with StatEdge Engagement applications.
+                            p.subtitle Robust competition management platforms facilitate
+                                | highly configurable management of any sport.
         section.hero.is-light
             .hero-body
                 .container
@@ -37,54 +33,50 @@
                                 img(src="@/assets/icons/people.png")
                             p.title.is-4 Who we are
                             p.subtitle
-                                | A group of like-minded sports fanatics that set out to
-                                | make a difference in grassroots sports in  Australia.
+                                | Group of like-minded sports fanatics set out to
+                                | make a difference in grassroots sports in Australia.
                         .column.has-text-centered.features(data-aos="fade-down")
                             span.icon.is-large
                                 img(src="@/assets/icons/eye.png")
                             p.title.is-4 Our philosophy
                             p.subtitle
-                                | To create and sustain a genuine connection with sporting
-                                | bodies and their communities through creating highly
-                                | engaged digital micro-environments.
+                                | To create connection through digital micro-environments for sporting
+                                | bodies and communities.
                         .column.has-text-centered.features(data-aos="fade-right")
                             span.icon.is-large
                                 img(src="@/assets/icons/pie-port.png")
                             p.title.is-4 Our model
                             p.subtitle
-                                | Our licensing agreements are a cost model that enables collaboration,
+                                | Licensing agreements that enables collaboration,
                                 | comfortable margin and product flexibility with our clients.
-        section.section
-            .container
-                p.title.has-text-centered Our partners
-                .columns
-                    .column
-                        // Rubgy
-                        .card.card-1(data-aos="fade-up")
-                            .card-1-bg-red
-                            .card-content
-                                .logo-float-1
-                                    a(href='#', target='_blank' @click.prevent="()=>null")
-                                        img(src='@/assets/images/logos/partners/RugbyAU_Logo_Primary copy.png')
-                                .card-1-text
-                                    p.is-family-code.is-size-4
-                                        | StatEdge chose to enter the sports technology landscape with the intention
-                                        | of creating world best participant sports software. StatEdge have executed
-                                        | creative and stable product across a demanding and influential clientele.
-                .columns
-                    .column
-                        // NRL
-                        .card.card-2(data-aos="fade-up")
-                            .card-2-bg-red
-                            .card-content
-                                .logo-float-2
-                                    a(href='#', target='_blank' @click.prevent="()=>null")
-                                        img(src='@/assets/images/logos/partners/NRL_logo copy.png')
-                                .card-2-text
-                                    p.is-family-code.is-size-4
-                                        | StatEdge chose to enter the sports technology landscape with the intention
-                                        | of creating world best participant sports software. StatEdge have executed
-                                        | creative and stable product across a demanding and influential clientele.
+        section.hero.mt-20
+            p.title.has-text-centered Our partners
+            .columns.mt-20
+                // Rubgy
+                .card.card-1(data-aos="fade-right")
+                    .card-1-bg-white
+                    .card-content
+                        .logo-float-1
+                            a(href='#', target='_blank' @click.prevent="()=>null")
+                                img(src='@/assets/images/logos/partners/RugbyAU_Logo_Primary copy.png')
+                        .card-1-text
+                            p.is-family-code.is-size-4
+                                | StatEdge chose to enter the sports technology landscape with the intention
+                                | of creating world best participant sports software. StatEdge have executed
+                                | creative and stable product across a demanding and influential clientele.
+            .columns.mt-20-tablet
+                // NRL
+                .card.card-2(data-aos="fade-left")
+                    .card-2-bg-white
+                    .card-content
+                        .logo-float-2
+                            a(href='#', target='_blank' @click.prevent="()=>null")
+                                img(src='@/assets/images/logos/partners/NRL_logo copy.png')
+                        .card-2-text
+                            p.is-family-code.is-size-4
+                                | StatEdge chose to enter the sports technology landscape with the intention
+                                | of creating world best participant sports software. StatEdge have executed
+                                | creative and stable product across a demanding and influential clientele.
         section.container
             .hero-body
                 p.title.has-text-centered We proudly sponsor
@@ -118,7 +110,12 @@
 
     .mt-20
         // have a bit  of margin on top of every heros
-        margin-top: 100px
+        margin-top: 80px
+    .mb-20
+        margin-bottom: 80px
+    .mt-20-tablet
+        @media(max-width: $tablet)
+            margin-top: 50px
 
     // todo: below should be global
     .is-text-primary
@@ -196,7 +193,7 @@
             .title
                 color: white
 
-            .card-1-bg-red
+            .card-1-bg-white
                 position: absolute
                 right: 0
                 top: 0
@@ -216,7 +213,7 @@
             position: relative
 
             background-image: url(~assets/images/card-bg/red-crowd.png)
-            // background-position: right bottom
+            background-position: right bottom
             // background-size: 50% 50%
             background-repeat: no-repeat
             background-attachment: fixed
@@ -256,7 +253,7 @@
                         width: 100%
                         text-align: left
 
-            .card-2-bg-red
+            .card-2-bg-white
                 position: absolute
                 left: -50px
                 top: 0
