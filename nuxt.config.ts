@@ -1,5 +1,12 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+    base: '/statedge/'
+} : {}
+
 export default {
     env: {},
+    generate: {
+        dir: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'gh-pages' : 'dist'
+    },
     head: {
         title: 'statedge',
         meta: [
@@ -27,7 +34,8 @@ export default {
     ],
     axios: {},
     router: {
-        linkActiveClass: 'is-active'
+        linkActiveClass: 'is-active',
+        ...routerBase,
     },
     styleResources: {
         sass: [

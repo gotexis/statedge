@@ -17,10 +17,14 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate"
+    "generate": "nuxt-ts generate",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt-ts build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt-ts generate",
+    "deploy-gh": "gh-pages -d gh-pages"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "0.3.2",
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.12.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
