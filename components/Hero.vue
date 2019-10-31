@@ -1,6 +1,6 @@
 <template lang="pug">
     section.hero.is-primary.is-medium.real-hero
-        .bg-container(:style="bgStyle")
+        .bg-container
         .bg-right(:style="bgRightStyle")
         // Hero head
         .hero-head
@@ -82,12 +82,6 @@
             this.percentage = (e.target.documentElement.scrollTop / e.target.documentElement.scrollHeight) || 0
         }
 
-        get bgStyle() {
-            return {
-                backgroundImage: `url(~assets/images/banner/hero-left.png)`
-            }
-        }
-
         get bgRightStyle() {
             const baseWidth = 0
             return {
@@ -109,15 +103,15 @@
         100%
             clip-path: polygon(100% 73%, 100% 100%, 100% 100%, 89% 100%)
 
-    @keyframes slideshow
-        0%
-            background-image: url(~assets/images/banner/hero-left.png)
-        50%
-            background-image: url(~assets/images/banner/hero-left.png)
-        60%
-            background-image: url(~assets/images/card-bg/1.png)
-        100%
-            background-image: url(~assets/images/card-bg/1.png)
+    // @keyframes slideshow
+        //0%
+        //    background-image: url(~assets/images/banner/hero-left.png)
+        //50%
+        //    background-image: url(~assets/images/banner/hero-left.png)
+        //60%
+        //    background-image: url(~assets/images/card-bg/1.png)
+        //100%
+        //    background-image: url(~assets/images/card-bg/1.png)
 
     // Hero scene including header
     .real-hero
@@ -172,8 +166,8 @@
             background-position: left bottom
             background-repeat: no-repeat
             background-size: 100%
-
-            animation: slideshow 7s infinite alternate
+            background-image: url(~assets/images/card-bg/1.png)
+            // animation: slideshow 7s infinite alternate
 
         .bg-right
             position: absolute

@@ -32,17 +32,19 @@ section.hero.mt-20
 </template>
 
 <style lang="sass" scoped>
+.mt-20
+    margin-top: 60px
+.mb-20
+    margin-bottom: 80px
+.mt-20-tablet
+    @media(max-width: $tablet)
+        margin-top: 50px
 
 .card-1
     overflow: hidden
     color: white
     position: relative
-
-    background-image: url(~assets/images/card-bg/red-crowd.png)
-    background-position: right bottom
-    background-size: cover
-    background-repeat: no-repeat
-    background-attachment: fixed
+    background: white
 
     z-index: -2
 
@@ -75,28 +77,22 @@ section.hero.mt-20
 
     .card-1-bg-white
         position: absolute
-        right: 0
+        left: 0
         top: 0
-        width: 100%
+        width: 800px
         height: 100%
         z-index: -1
-        background: white
-        clip-path: polygon(40% 0, 100% 0%, 100% 100%, 80% 100%)
-
-        @media(max-width: $tablet)
-            display: none
+        background-image: url(~assets/images/card-bg/red-crowd.png)
+        background-position: left bottom
+        background-repeat: no-repeat
+        background-attachment: fixed
+        clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%)
 
 .card-2
     color: white
     // controls the max content of card
     overflow: hidden
     position: relative
-
-    background-image: url(~assets/images/card-bg/red-crowd.png)
-    background-position: right bottom
-    // background-size: 50% 50%
-    background-repeat: no-repeat
-    background-attachment: fixed
 
     z-index: -2
 
@@ -135,14 +131,15 @@ section.hero.mt-20
 
     .card-2-bg-white
         position: absolute
-        left: -50px
+        right: 0
         top: 0
-        width: 70%
+        width: 800px
         height: 100%
         z-index: -1
-        clip-path: polygon(0 0, 86% 0, 46% 100%, 0 100%)
-        background-color: white
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)
+        background-image: url(~assets/images/card-bg/red-crowd.png)
+        background-position: right bottom
+        background-repeat: no-repeat
+        background-attachment: fixed
 
-        @media(max-width: $tablet)
-            display: none
 </style>

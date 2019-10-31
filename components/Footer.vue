@@ -6,8 +6,7 @@
         .bg-left-3.break-mobile
         .is-inline-block.content(data-aos="fade-left")
             p.glow Get in touch
-            p
-                a(href='mailto:contact@statedge.com.au' target="_blank") contact@statedge.com.au
+            a(href='mailto:contact@statedge.com.au' target="_blank") contact@statedge.com.au
             br
             .logo-container
                 img.logo-top(src='@/assets/images/logo/StatEdge_Logo-lockup-white.png', alt='Logo')
@@ -42,7 +41,6 @@ export default class Footer extends Vue {}
             opacity: 0
         70%
             opacity: 100%
-
 
     .logo-container
         position: relative

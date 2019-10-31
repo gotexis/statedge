@@ -55,12 +55,24 @@
             .hero-body
                 p.title.has-text-centered Proud Sponsors Of
                 .partners
+                    // partner 1
                     .partner(data-aos="fade")
-                        a(href='#', target='_blank' @click.prevent="()=>null")
-                            img(src='@/assets/images/logos/partners/Bowral.jpeg')
+                        .partner-logo
+                            a(href='#', target='_blank' @click.prevent="()=>null")
+                                img(src='@/assets/images/logos/partners/Bowral.jpeg')
+                        .partner-text
+                            p.is-family-code.is-size-4.align-left
+                                |   Bowral Rubgy League Football Club Inc.
+
+                    // partner 2
                     .partner(data-aos="fade")
-                        a(href='#', target='_blank' @click.prevent="()=>null")
-                            img(src='@/assets/images/logos/partners/Randwick.jpg')
+                        .partner-logo
+                            a(href='#', target='_blank' @click.prevent="()=>null")
+                                img(src='@/assets/images/logos/partners/Randwick.jpg')
+                        .partner-text
+                            p.is-family-code.is-size-4.align-left
+                                | Randwick City Football Club
+        // Footer
         Footer
 </template>
 
@@ -82,6 +94,8 @@
 </script>
 
 <style lang="sass" scoped>
+    .align-left
+        text-align: left
 
     .mt-20
         // have a bit  of margin on top of every heros
@@ -105,9 +119,19 @@
         .partner
             flex: 1
             text-align: center
+            display: flex
+            flex-direction: row
+            min-width: 400px
+            margin-top: 30px
 
-            img
-                height: 100px
+            .partner-logo
+                display: flex
+                flex-direction: column
+                justify-content: center
+                margin-right: 10px
+                min-width: 100px
+                img
+                    max-height: 100px
 
     // feature icon pics
     .features
