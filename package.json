@@ -20,7 +20,7 @@
     "generate": "nuxt-ts generate",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt-ts build",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt-ts generate",
-    "deploy-gh": "gh-pages -d gh-pages"
+    "deploy-gh": "gh-pages -d gh-pages --dotfiles"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "0.3.2",
