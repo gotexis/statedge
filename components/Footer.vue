@@ -77,11 +77,11 @@ export default class Footer extends Vue {}
                 border-bottom: 1px solid $primary
 
         .break-mobile
-            @media (max-width: 900px)
+            @media (max-width: 1000px)
                 display: none
 
         .content
-            @media (min-width: 901px)
+            @media (min-width: 1000px)
                 margin-left: 70%
 
         .bg-left
@@ -93,10 +93,11 @@ export default class Footer extends Vue {}
             height: 100%
             background-image: url(~assets/images/card-bg/1.png)
             background-size: 400px 1000px
+            background-repeat: repeat
             /*background-size: cover*/
             background-position: bottom
             /*background-attachment: fixed*/
-            transform: rotate(-45deg)
+            transform: rotate(-60deg)
 
         .bg-left-1
             position: absolute
@@ -106,9 +107,10 @@ export default class Footer extends Vue {}
             height: 50%
             background-image: url(~assets/images/graphics/StatEdge-Graphics--03.jpg)
             background-size: 70%
+            background-repeat: repeat
             /*background-position: bottom*/
             /*background-attachment: fixed
-            transform: rotate(-45deg)
+            transform: rotate(-60deg)
 
         .bg-left-2
             position: absolute
@@ -120,17 +122,17 @@ export default class Footer extends Vue {}
             background-size: 70%
             /*background-position: bottom*/
             /*background-attachment: fixed
-            transform: rotate(-45deg)
+            transform: rotate(-60deg)
 
         .bg-left-3
             position: absolute
-            left: -35px
-            top: 0
+            left: -40px
+            top: -10px
             width: 66%
             height: 50%
             background-image: url(~assets/images/graphics/StatEdge-Graphics--01.jpg)
             background-size: 70%
             /*background-position: bottom*/
             /*background-attachment: fixed
-            transform: rotate(-45deg)
+            transform: rotate(-60deg)
 </style>
