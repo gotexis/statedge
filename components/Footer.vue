@@ -5,12 +5,18 @@
         .bg-left-2.break-mobile
         .bg-left-3.break-mobile
         .is-inline-block.content(data-aos="fade-left")
+            p.glow Get in touch
             p
-                strong StatEdge
+                a(href='mailto:contact@statedge.com.au' target="_blank") contact@statedge.com.au
+            br
+            .logo-container
+                img.logo-top(src='@/assets/images/logo/StatEdge_Logo-lockup-white.png', alt='Logo')
+                img.logo-under(src='@/assets/images/logo/StatEdge_Logo-lockup-red.png', alt='Logo2')
             p Sport technology reinvented.
-            p.glow Let’s chat.
             p
-                a(href='mailto:ben.trevisiol@statedge.com.au' target="_blank") Ben Trevisiol - 0412 345 678
+                strong ABN
+                |
+                | 95 163 129 753
 
 </template>
 
@@ -37,6 +43,22 @@ export default class Footer extends Vue {}
         70%
             opacity: 100%
 
+
+    .logo-container
+        position: relative
+        width: 140px
+        height: 50px
+
+        img
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+
+        .logo-under
+            clip-path: polygon(25% 0%, 50% 0, 24% 100%, 0% 100%)
+            animation: swipe 7s infinite
+
     // todo: below should be put into a separate _color,sass file (black scheme)
     footer
         position: relative
@@ -62,7 +84,7 @@ export default class Footer extends Vue {}
 
         .content
             @media (min-width: 901px)
-                margin-left: 60%
+                margin-left: 70%
 
         .bg-left
             animation: footer-slideshow 10s cubic-bezier(0.6, 0, 0.2, 1) infinite
@@ -104,7 +126,7 @@ export default class Footer extends Vue {}
 
         .bg-left-3
             position: absolute
-            left: -30px
+            left: -35px
             top: 0
             width: 66%
             height: 50%

@@ -7,27 +7,27 @@
             nav.navbar
                 .container
                     .navbar-brand
-                        a.navbar-item
-                            .logo-container
-                                img.logo-top(src='@/assets/images/logo/StatEdge_Logo-lockup-white.png', alt='Logo')
-                                img.logo-under(src='@/assets/images/logo/StatEdge_Logo-lockup-red.png', alt='Logo2')
-                        span.navbar-burger.burger
-                            span
-                            span
-                            span
-                    #navbarMenu.navbar-menu
-                        .navbar-end
-                            nuxt-link.navbar-item(:to="{name: 'index'}")
-                                | Home
-                            a.navbar-item(:to="{name: 'about'}")
-                                | About
-                            a.navbar-item
-                                | Contact
-                            span.navbar-item
-                                a.button.is-primary.is-inverted
-                                    span.icon
-                                        i.fab.fa-github
-                                    span GitHub
+                        // a.navbar-item
+                        //     .logo-container
+                        //         img.logo-top(src='@/assets/images/logo/StatEdge_Logo-lockup-white.png', alt='Logo')
+                        //         img.logo-under(src='@/assets/images/logo/StatEdge_Logo-lockup-red.png', alt='Logo2')
+                        // span.navbar-burger.burger
+                        //     span
+                        //     span
+                        //     span
+                    // #navbarMenu.navbar-menu
+                    //     .navbar-end
+                    //         nuxt-link.navbar-item(:to="{name: 'index'}")
+                    //             | Home
+                    //         a.navbar-item(:to="{name: 'about'}")
+                    //             | About
+                    //         a.navbar-item
+                    //             | Contact
+                    //         span.navbar-item
+                    //             a.button.is-primary.is-inverted
+                    //                 span.icon
+                    //                     i.fab.fa-github
+                    //                 span GitHub
         // Hero content: will be in the middle
         .hero-body
             .container.has-text-centered
